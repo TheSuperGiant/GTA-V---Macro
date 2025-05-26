@@ -1,9 +1,5 @@
 # GTA-V - Macro
 
-[View text file](https://raw.githubusercontent.com/TheSuperGiant/GTA-V/refs/heads/Stable/Arcade.html)
-
-```text
-
 F1:
 Snack menu
 
