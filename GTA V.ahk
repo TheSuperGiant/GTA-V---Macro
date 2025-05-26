@@ -31,7 +31,7 @@ F4::
 		Send {Enter}
 		Sleep, %KeyDelay_Enter%
 		Send {Up 3}{Enter}
-		; Menu()
+		Menu()
 	}
 Return
 
@@ -50,7 +50,7 @@ Return
 	if InStr(title, program_window_title){
 		Menu__Kosatka__Return_Options()
 		Send {Up 2}{Enter}
-		; Menu()
+		Menu()
 	}
 Return
 ; Request Oppressor MK II
