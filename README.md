@@ -1,5 +1,10 @@
 # GTA-V - Macro
 
+[View text file](https://raw.githubusercontent.com/TheSuperGiant/GTA-V/refs/heads/Stable/Arcade.html)
+
+<details>
+  <summary>Show embedded text</summary>
+
 F1:
 Snack menu
 
