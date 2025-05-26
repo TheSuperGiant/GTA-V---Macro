@@ -2,8 +2,7 @@
 
 [View text file](https://raw.githubusercontent.com/TheSuperGiant/GTA-V/refs/heads/Stable/Arcade.html)
 
-<details>
-  <summary>Show embedded text</summary>
+```text
 
 F1:
 Snack menu
