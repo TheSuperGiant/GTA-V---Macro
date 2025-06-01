@@ -1,6 +1,6 @@
 # GTA-V - Macro
 
-Pause::
+Pause:
 Reload script if Shift+F... hotkey if not will work
 
 F1:
