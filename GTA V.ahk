@@ -2,8 +2,14 @@
 
 KeyDelay := 30
 KeyDelay_Enter := 50
+KeyDelay_Enter_Phone := 500
 SetKeyDelay, %keyDelay%, %keyDelay%
 program_window_title := "Grand Theft Auto V"
+
+; Restarts this ahk file.
+Pause::
+	Reload
+Return
 
 ; Snacks
 F1::
@@ -71,6 +77,7 @@ F6::
 	}
 Return
 ; Request Personal Vehicle
+CapsLock & F6::
 <+F6::
 	WinGetActiveTitle, title
 	if InStr(title, program_window_title){
@@ -272,4 +279,15 @@ Menu__Manage_Vehicles(){
 	Sleep, %keyDelay%
 	Send {Enter}
 	Sleep, %KeyDelay_Enter%
+}
+Phone(){
+	Click Middle
+	Sleep, 500
+}
+Phone__Contacts(){
+	Phone()
+	Send {Up}{Right}
+	Sleep, %keyDelay%
+	Send {Enter}
+	Sleep, %KeyDelay_Enter_Phone%
 }
