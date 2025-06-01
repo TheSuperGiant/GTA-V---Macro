@@ -1,7 +1,7 @@
 # GTA-V - Macro
 
 Pause:
-Reload script if Shift+F... hotkey if not will work
+Reload script if Shift+F... hotkey not will work
 
 F1:
 Snack menu
