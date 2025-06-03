@@ -2,7 +2,6 @@
 
 KeyDelay := 30
 KeyDelay_Enter := 50
-KeyDelay_Enter_Phone := 500
 SetKeyDelay, %keyDelay%, %keyDelay%
 program_window_title := "Grand Theft Auto V"
 
@@ -56,7 +55,6 @@ Return
 	if InStr(title, program_window_title){
 		Menu__Kosatka__Return_Options()
 		Send {Up 2}{Enter}
-		Menu()
 	}
 Return
 ; Request Oppressor MK II
