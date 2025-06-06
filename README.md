@@ -3,6 +3,22 @@
 Pause:
 Reload script if Shift+F... hotkey not will work
 
+------------------------------------------------------------
+
+Default (Free Roam) is 5th position from top.
+Some missions need 4th or 6th position from top.
+
+Shift + 1:
+Freemode (Free Roam) — 5th position from the top.
+
+Shift + 2:
+Some missions — 4th position from the top.
+
+Shift + 3:
+Other missions — 6th position from the top.
+
+------------------------------------------------------------
+
 F1:
 Snack menu
 
