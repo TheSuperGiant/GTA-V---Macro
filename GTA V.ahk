@@ -2,7 +2,6 @@
 
 KeyDelay := 30
 KeyDelay_Enter := 50
-; KeyDelay_Enter_Phone := 500
 SetKeyDelay, %keyDelay%, %keyDelay%
 Snack_menu__Down := 1
 program_window_title := "Grand Theft Auto V"
@@ -119,24 +118,6 @@ Return
 		Menu__Manage_Vehicles()
 		Send {Up 3}{Enter}
 		Menu()
-	}
-Return
-
-; Mors Mutual Insurance
-; Note have this contacts active to let it work:  
-<+F8::
-	WinGetActiveTitle, title
-	if InStr(title, program_window_title){
-		Phone__Contacts()
-		;Send {Right}{Down}{Enter}
-		;sleep, 100
-		Send {Right}
-		;sleep, 100
-		;Send {Down}
-		;sleep, 100
-		;Send {Enter}
-		;Send {Up 5}{Enter}
-		Sleep, %KeyDelay_Enter_Phone%
 	}
 Return
 
