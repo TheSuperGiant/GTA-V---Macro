@@ -9,6 +9,9 @@ Snack menu
 F2:
 Snack menu + eat 1 snack
 
+F5:
+Armor menu
+
 F4:
 Armor + equip Super Heavy Armor
 
