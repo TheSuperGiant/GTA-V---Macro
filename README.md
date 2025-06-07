@@ -1,3 +1,3 @@
 # GTA-V - Macro
 
-Hotkeys can be found in Hotkeys.md
+[View Hotkeys](https://raw.githubusercontent.com/TheSuperGiant/GTA-V---Macro/refs/heads/Stable/Hotkeys.md)
