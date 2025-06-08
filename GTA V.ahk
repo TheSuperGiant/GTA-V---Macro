@@ -1,7 +1,7 @@
 #SingleInstance Force
 
-KeyDelay := 30
-KeyDelay_Enter := 50
+KeyDelay := 22
+KeyDelay_Enter := 102 - (KeyDelay * 2)
 SetKeyDelay, %keyDelay%, %keyDelay%
 Snack_menu__Down := 1
 program_window_title := "Grand Theft Auto V"
@@ -11,9 +11,13 @@ Pause::
 	Reload
 Return
 
+
+;-----------------------------
+
 ; Default (Free Roam) is 5th position from top.
 ; Some missions need 4th or 6th position from top.
 ; Health and Ammo menu position counted from top.
+
 ; Freemode (Free Roam) — 5th position from the top.
 >+1::
 <+1::
@@ -31,6 +35,8 @@ Return
 <+3::
 	Snack_menu__Down := 2
 Return
+
+;-----------------------------
 
 ; Snacks
 ; open snack menu
@@ -51,6 +57,7 @@ F2::
 Return
 
 ; Armor
+; Armor menu
 F5::
 	WinGetActiveTitle, title
 	if InStr(title, program_window_title){
@@ -118,6 +125,24 @@ Return
 		Menu__Manage_Vehicles()
 		Send {Up 3}{Enter}
 		Menu()
+	}
+Return
+
+; Mors Mutual Insurance
+; Note have this contacts active to let it work:  
+<+F8::
+	WinGetActiveTitle, title
+	if InStr(title, program_window_title){
+		Phone__Contacts()
+		;Send {Right}{Down}{Enter}
+		;sleep, 100
+		Send {Right}
+		;sleep, 100
+		;Send {Down}
+		;sleep, 100
+		;Send {Enter}
+		;Send {Up 5}{Enter}
+		Sleep, %KeyDelay_Enter_Phone%
 	}
 Return
 
@@ -252,7 +277,9 @@ AutoClicker(){
 	Click
 }
 Menu(){
-	Sleep, 5
+	global keyDelay
+	Menu_sleep := 57 - (KeyDelay * 2)
+	Sleep, %Menu_sleep%
 	Send {m}
 	Sleep, %KeyDelay_Enter%
 }
