@@ -133,24 +133,6 @@ Return
 	}
 Return
 
-; Mors Mutual Insurance
-; Note have this contacts active to let it work:  
-<+F8::
-	WinGetActiveTitle, title
-	if InStr(title, program_window_title){
-		Phone__Contacts()
-		;Send {Right}{Down}{Enter}
-		;sleep, 100
-		Send {Right}
-		;sleep, 100
-		;Send {Down}
-		;sleep, 100
-		;Send {Enter}
-		;Send {Up 5}{Enter}
-		Sleep, %KeyDelay_Enter_Phone%
-	}
-Return
-
 ; let GTA process sleep for 10 second so you come in an solo session.
 ^F8::
 	Process_Suspend("GTA5.exe")
