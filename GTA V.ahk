@@ -1,5 +1,10 @@
 #SingleInstance Force
 
+; ⚠️ WARNING:
+; Use of this macro is at your own risk.
+; Rockstar may ban you from GTA Online or other Rockstar Games if detected.
+; This script is made for personal use only.
+
 KeyDelay := 22
 KeyDelay_Enter := 102 - (KeyDelay * 2)
 SetKeyDelay, %keyDelay%, %keyDelay%
