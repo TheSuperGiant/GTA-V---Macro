@@ -1,19 +1,21 @@
 Pause:
-Reload script if Shift+F... hotkey not will work
+Reload script if hotkey doesn't work.
 
 ------------------------------------------------------------
 
-Default (Free Roam) is 5th position from top.
-Some missions need 4th or 6th position from top.
+Default (Free Roam) is 3th position from top.
+Some missions need 2th or 4th position from top.
+‘Manage Vehicles’ menu position counted from the top.
+Works for 'Health and Ammo' and 'Manage Vehicles' in menu.
 
 Shift + 1:
-Freemode (Free Roam) — 5th position from the top.
+Freemode (Free Roam) — 3th position from the top.
 
 Shift + 2:
-Some missions — 4th position from the top.
+Some missions — 2th position from the top.
 
 Shift + 3:
-Other missions — 6th position from the top.
+Other missions — 4th position from the top.
 
 ------------------------------------------------------------
 
