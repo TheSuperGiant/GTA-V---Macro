@@ -8,7 +8,7 @@ Some missions need 2th or 4th position from top.
 ‘Manage Vehicles’ menu position counted from the top.
 Works for 'Health and Ammo' and 'Manage Vehicles' in menu.
 
-Shift + 1:<br>
+Shift + 1:
 Freemode (Free Roam) — 3th position from the top.
 
 Shift + 2:<br>
