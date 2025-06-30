@@ -52,6 +52,9 @@ Return Personal Vehicle to Storage
 Shift + F5:
 Auto Grabber --> for example Gold, Cash etc.
 
+ctrl + F6:
+AFK Walking
+
 F8:
 Visible 48 minutes timer
 
