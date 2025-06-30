@@ -11,61 +11,61 @@ Works for 'Health and Ammo' and 'Manage Vehicles' in menu.
 Shift + 1:
 Freemode (Free Roam) — 3th position from the top.
 
-Shift + 2:<br>
+Shift + 2:
 Some missions — 2th position from the top.
 
-Shift + 3:<br>
+Shift + 3:
 Other missions — 4th position from the top.
 
 ------------------------------------------------------------
 
-F1:<br>
+F1:
 Snack menu
 
-F2:<br>
+F2:
 Snack menu + eat 1 snack
 
-F5:<br>
+F5:
 Armor menu
 
-F4:<br>
+F4:
 Armor + equip Super Heavy Armor
 
-LShift + F2:<br>
+LShift + F2:
 Request Sparrow
 
-RShift + F2:<br>
+RShift + F2:
 Return Sparrow
 
-LShift + F4:<br>
+LShift + F4:
 Request Oppressor MK II
 
-F6:<br>
+F6:
 Menu Personal Vehicle
 
-LShift + F6:<br>
+LShift + F6:
 Request Personal Vehicle
 
-RShift + F6:<br>
+RShift + F6:
 Return Personal Vehicle to Storage
 
-Shift + F5:<br>
+Shift + F5:
 Auto Grabber --> for example Gold, Cash etc.
 
-ctrl + F6:<br>
+ctrl + F6:
 AFK Walking
 
-F8:<br>
+F8:
 Visible 48 minutes timer
 
-F12:<br>
+F12:
 Invisible 48 minutes timer
 
-Ctrl + F8:<br>
+Ctrl + F8:
 Let GTA process sleep for 10 second so you come in an solo session.
 
-F10:<br>
+F10:
 Auto bike rider
 
-Ctrl + F11:<br>
+Ctrl + F11:
 Close GTA directly
