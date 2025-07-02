@@ -146,24 +146,6 @@ Return
 	Shift_Up()
 Return
 
-; Mors Mutual Insurance
-; Note have this contacts active to let it work:  
-<+F8::
-	if Active_Window(){
-		Phone__Contacts()
-		;Send {Right}{Down}{Enter}
-		;sleep, 100
-		Send {Right}
-		;sleep, 100
-		;Send {Down}
-		;sleep, 100
-		;Send {Enter}
-		;Send {Up 5}{Enter}
-		Sleep, %KeyDelay_Enter_Phone%
-	}
-	Shift_Up()
-Return
-
 ; let GTA process sleep for 10 second so you come in an solo session.
 ^F8::
 	Process_Suspend("GTA5.exe")
@@ -320,11 +302,6 @@ Menu(){
 	Menu_sleep := 57 - (KeyDelay * 2)
 	if(Menu_First_Time = 1){
 		Send {m 2}
-		;Send {m}
-		;Menu_sleep := 57 - KeyDelay
-		;Sleep, %Menu_sleep%
-		;Send {m}
-		;Sleep, 25
 		Sleep, 40
 		Menu_First_Time := 0
 	}
@@ -391,17 +368,6 @@ Menu__Manage_Vehicles(){
 	Sleep, %keyDelay%
 	Send {Enter}
 	Sleep, %KeyDelay_Enter%
-}
-Phone(){
-	Click Middle
-	Sleep, 500
-}
-Phone__Contacts(){
-	Phone()
-	Send {Up}{Right}
-	Sleep, %keyDelay%
-	Send {Enter}
-	Sleep, %KeyDelay_Enter_Phone%
 }
 
 ;-------------------------------
