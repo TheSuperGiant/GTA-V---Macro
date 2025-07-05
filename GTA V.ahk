@@ -301,8 +301,11 @@ Menu(){
 	global Menu_First_Time, keyDelay
 	Menu_sleep := 57 - (KeyDelay * 2)
 	if(Menu_First_Time = 1){
-		Send {m 2}
-		Sleep, 40
+		Send {m}
+		Menu_sleep := 57 - KeyDelay
+		Sleep, %Menu_sleep%
+		Send {m}
+		Sleep, 10
 		Menu_First_Time := 0
 	}
 	Sleep, %Menu_sleep%
