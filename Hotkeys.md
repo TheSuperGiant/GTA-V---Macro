@@ -29,7 +29,7 @@ F5:
 Armor menu
 
 F4:
-Armor + equip Super Heavy Armor
+Armor menu + equip Super Heavy Armor
 
 LShift + F2:
 Request Sparrow
