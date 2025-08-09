@@ -62,7 +62,7 @@ F12:
 Invisible 48 minutes timer
 
 Ctrl + F8:
-Let GTA process sleep for 10 second so you come in an solo session.
+Pause GTA for 10 seconds to join a solo session.
 
 F10:
 Auto bike rider
