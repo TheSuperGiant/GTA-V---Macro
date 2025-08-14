@@ -163,6 +163,18 @@ Return
 	}
 return
 
+; Auto Saving
+Insert::
+	if Active_Window(){
+		Menu__Appearance()
+		Send {Down 3}
+		Sleep, %keyDelay%
+		Send {Enter}
+		Sleep, %keyDelay%
+		Send {m}
+	}
+Return
+
 ; Close GTA directly.
 ^F11::
 	Process, Close, GTA5.exe
@@ -305,7 +317,8 @@ Menu(){
 		Menu_sleep := 57 - KeyDelay
 		Sleep, %Menu_sleep%
 		Send {m}
-		Sleep, 10
+		Menu_sleep := 57 - KeyDelay
+		;Sleep, 10
 		Menu_First_Time := 0
 	}
 	Sleep, %Menu_sleep%
@@ -368,6 +381,13 @@ Menu__Manage_Vehicles(){
 	global Menu_Down
 	Menu__Down_total := 1 + Menu_Down
 	Send {Down %Menu__Down_total%}
+	Sleep, %keyDelay%
+	Send {Enter}
+	Sleep, %KeyDelay_Enter%
+}
+Menu__Appearance(){
+	Menu()
+	Send {Down 5}
 	Sleep, %keyDelay%
 	Send {Enter}
 	Sleep, %KeyDelay_Enter%
