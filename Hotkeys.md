@@ -67,7 +67,7 @@ Pause GTA for 10 seconds to join a solo session.
 F10:
 Auto bike rider
 
-Ins::
+Ins:
 Auto-saving the game based on outfit
 
 Ctrl + F11:
