@@ -14,7 +14,7 @@ Using this macro is at your own risk. If Rockstar detects it, you could get bann
 - Click on Convert.
 - Click on your new created EXE file and the Macro is working. Next time when you need to start the Macro again you have only to click on that new created exe file.
 
-[View Hotkeys](https://raw.githubusercontent.com/TheSuperGiant/GTA-V---Macro/refs/heads/Stable/Hotkeys.md)
+[View Hotkeys](https://raw.githubusercontent.com/TheSuperGiant/GTA-V---Macro/refs/heads/main/Hotkeys.md)
 
 ## Disclaimer
 This script is provided as-is, without any warranty or guarantee. By using this script, you acknowledge that you do so at your own risk. I am not responsible for any damage, data loss, or other issues that may arise from using this script.
