@@ -163,7 +163,18 @@ Return
 	}
 return
 
-; Auto Saving
+; AFK Dancing in Nightclub
+!F6::
+	toggle_AFK_Dancing := !toggle_AFK_Dancing
+	if(toggle_AFK_Dancing && Active_Window()){
+        ; SetTimer, AutoClicker_Left, % Random (500, 600)
+        SetTimer, AutoClicker_Left, 475
+	}else{
+        SetTimer, AutoClicker_Left, Off
+	}
+return
+
+; Force-save
 Insert::
 	if Active_Window(){
 		Menu__Appearance()
@@ -249,6 +260,12 @@ F8::
 	}
 Return
 
+AutoClicker_Left()
+{
+	Random, sleepdelay, 0, 50
+	Sleep, sleepDelay
+	Click
+}
 Clock:
 	FormatTime, clock, %time%, HH:mm:ss
 	time += -1, Seconds
@@ -318,7 +335,6 @@ Menu(){
 		Sleep, %Menu_sleep%
 		Send {m}
 		Menu_sleep := 57 - KeyDelay
-		;Sleep, 10
 		Menu_First_Time := 0
 	}
 	Sleep, %Menu_sleep%

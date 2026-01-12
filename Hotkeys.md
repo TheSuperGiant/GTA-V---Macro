@@ -55,6 +55,9 @@ Auto Grabber --> for example Gold, Cash etc.
 ctrl + F6:
 AFK Walking
 
+alt + F6:
+AFK Dancing in Nightlcub
+
 F8:
 Visible 48 minutes timer
 
