@@ -29,7 +29,7 @@ Return
 ; Freemode (Free Roam) — 3th position from the top.
 >+1::
 <+1::
-	if Active_Window() {
+	if Active_Window(){
 		Menu_Down := 1
 	}else{
 		GetSymbol(1)
@@ -40,7 +40,7 @@ Return
 ; Some missions — 2th position from the top.
 >+2::
 <+2::
-	if Active_Window() {
+	if Active_Window(){
 		Menu_Down := 0
 	}else{
 		GetSymbol(2)
@@ -51,7 +51,7 @@ Return
 ; Other missions — 4th position from the top.
 >+3::
 <+3::
-	if Active_Window() {
+	if Active_Window(){
 		Menu_Down := 2
 	}else{
 		GetSymbol(3)
@@ -64,13 +64,13 @@ Return
 ; Snacks
 ; open snack menu
 F1::
-	if Active_Window() {
+	if Active_Window(){
 		Menu__Snacks()
 	}
 Return
 ; open snack menu + eating 1 snack
 F2::
-	if Active_Window() {
+	if Active_Window(){
 		Menu__Snacks()
 		Sleep, %KeyDelay_Enter%
 		Send {Enter}
@@ -80,13 +80,13 @@ Return
 ; Armor
 ; Armor menu
 F5::
-	if Active_Window() {
+	if Active_Window(){
 		Menu__Body_Armor()
 	}
 Return
 ; Armor menu + equip Super Heavy Armor
 F4::
-	if Active_Window() {
+	if Active_Window(){
 		Menu__Body_Armor()
 		Send {Enter}
 		Menu()
@@ -96,7 +96,7 @@ Return
 ; Sparrow
 ; Request Sparrow
 <+F2::
-	if Active_Window() {
+	if Active_Window(){
 		Menu__Kosatka()
 		Send {Down}{Enter}
 	}
@@ -104,7 +104,7 @@ Return
 Return
 ; Return Sparrow
 >+F2::
-	if Active_Window() {
+	if Active_Window(){
 		Menu__Kosatka__Return_Options()
 		Send {Up 2}{Enter}
 	}
@@ -112,7 +112,7 @@ Return
 Return
 ; Request Oppressor MK II
 <+F4::
-	if Active_Window() {
+	if Active_Window(){
 		Menu__Terrorbyte()
 		Send {Down 2}{Enter}
 		Menu()
@@ -122,14 +122,14 @@ Return
 
 ; Personal Vehicle
 F6::
-	if Active_Window() {
+	if Active_Window(){
 		Menu__Manage_Vehicles()
 	}
 Return
 ; Request Personal Vehicle
 CapsLock & F6::
 <+F6::
-	if Active_Window() {
+	if Active_Window(){
 		Menu__Manage_Vehicles()
 		Send {Enter}
 		Menu()
@@ -138,7 +138,7 @@ CapsLock & F6::
 Return
 ; Return Personal Vehicle to Storage
 >+F6::
-	if Active_Window() {
+	if Active_Window(){
 		Menu__Manage_Vehicles()
 		Send {Up 3}{Enter}
 		Menu()
@@ -176,7 +176,7 @@ return
 
 ; Force-save
 Insert::
-	if Active_Window() {
+	if Active_Window(){
 		Menu__Appearance()
 		Send {Down 3}
 		Sleep, %keyDelay%
@@ -288,7 +288,7 @@ DbD1_Toggle:
 	}
 Return
 
-DbD1() {
+DbD1(){
 	SoundPlay, %A_WinDir%\Media\Alarm01.wav
 }
 ProcExist(PID_or_Name=""){
@@ -305,20 +305,20 @@ Process_Suspend(PID_or_Name){
 	DllCall("ntdll.dll\NtResumeProcess", "Int", h)
 	DllCall("CloseHandle", "Int", h)
 }
-Shift_Up() {
+Shift_Up(){
 	Send {LShift up}{RShift up}
 }
-Active_Window() {
+Active_Window(){
 	global program_window_title
 	WinGetActiveTitle, title
 	if InStr(title, program_window_title){
 		return 1
 	}
 }
-Speed_Bike() {
+Speed_Bike(){
 	send {LShift}
 }
-AutoClicker() {
+AutoClicker(){
 	CoordMode, Mouse, Window
 	MouseMove, 0, 0, 0
 	Click
@@ -326,7 +326,7 @@ AutoClicker() {
 
 
 
-Menu() {
+Menu(){
 	global Menu_First_Time, keyDelay
 	Menu_sleep := 57 - (KeyDelay * 2)
 	if(Menu_First_Time = 1){
@@ -341,7 +341,7 @@ Menu() {
 	Send {m}
 	Sleep, %KeyDelay_Enter%
 }
-Menu__Health_and_Ammo() {
+Menu__Health_and_Ammo(){
 	Menu()
 	global Menu_Down
 	Menu__Down_total := 3 + Menu_Down
@@ -350,13 +350,13 @@ Menu__Health_and_Ammo() {
 	Send {Enter}
 	Sleep, %KeyDelay_Enter%
 }
-Menu__Snacks() {
+Menu__Snacks(){
 	Menu__Health_and_Ammo()
 	Send {Down 2}
 	Sleep, %keyDelay%
 	Send {Enter}
 }
-Menu__Body_Armor() {
+Menu__Body_Armor(){
 	Menu__Health_and_Ammo()
 	Send {Down}
 	Sleep, %keyDelay%
@@ -364,35 +364,35 @@ Menu__Body_Armor() {
 	Sleep, %KeyDelay_Enter%
 	Send {Up 3}
 }
-Menu__Service_Vehicles() {
+Menu__Service_Vehicles(){
 	Menu()
 	Send {Down 3}
 	Sleep, %keyDelay%
 	Send {Enter}
 	Sleep, %KeyDelay_Enter%
 }
-Menu__Kosatka() {
+Menu__Kosatka(){
 	Menu__Service_Vehicles()
 	Send {Up 2}
 	Sleep, %keyDelay%
 	Send {Enter}
 	Sleep, %KeyDelay_Enter%
 }
-Menu__Kosatka__Return_Options() {
+Menu__Kosatka__Return_Options(){
 	Menu__Kosatka()
 	Send {Down 3}
 	Sleep, %keyDelay%
 	Send {Enter}
 	Sleep, %KeyDelay_Enter%
 }
-Menu__Terrorbyte() {
+Menu__Terrorbyte(){
 	Menu__Service_Vehicles()
 	Send {Down 3}
 	Sleep, %keyDelay%
 	Send {Enter}
 	Sleep, %KeyDelay_Enter%
 }
-Menu__Manage_Vehicles() {
+Menu__Manage_Vehicles(){
 	Menu()
 	global Menu_Down
 	Menu__Down_total := 1 + Menu_Down
@@ -401,7 +401,7 @@ Menu__Manage_Vehicles() {
 	Send {Enter}
 	Sleep, %KeyDelay_Enter%
 }
-Menu__Appearance() {
+Menu__Appearance(){
 	Menu()
 	Send {Down 5}
 	Sleep, %keyDelay%
@@ -411,7 +411,7 @@ Menu__Appearance() {
 
 ;-------------------------------
 
-GetKeyboardLayout() {
+GetKeyboardLayout(){
 	WinGet, hWnd, ID, A
 	threadID := DllCall("GetWindowThreadProcessId", "UInt", hWnd, "UInt*", 0)
 	layoutID := DllCall("GetKeyboardLayout", "UInt", threadID)
