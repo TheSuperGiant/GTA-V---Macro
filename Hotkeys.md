@@ -46,16 +46,16 @@ Menu Personal Vehicle
 LShift + F6:
 Request Personal Vehicle
 
+alt + F6:
+Request Phantom Wedge
+
 RShift + F6:
 Return Personal Vehicle to Storage
 
-Shift + F5:
-Auto Grabber --> for example Gold, Cash etc.
-
-ctrl + F6:
+ctrl + F10:
 AFK Walking
 
-alt + F6:
+alt + F10:
 AFK Dancing in Nightlcub
 
 F8:
@@ -73,5 +73,5 @@ Auto bike rider
 Ins:
 Force-save the game based on outfit
 
-Ctrl + F11:
+Ctrl + F12:
 Close GTA directly

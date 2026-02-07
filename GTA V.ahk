@@ -127,7 +127,6 @@ F6::
 	}
 Return
 ; Request Personal Vehicle
-CapsLock & F6::
 <+F6::
 	if Active_Window(){
 		Menu__Manage_Vehicles()
@@ -135,6 +134,14 @@ CapsLock & F6::
 		Menu()
 	}
 	Shift_Up()
+Return
+; Request Phantom Wedge
+!F6::
+	if Active_Window(){
+		Menu__Manage_Vehicles()
+		Send {Down 2}[{Right 4}{Enter}
+		Menu()
+	}
 Return
 ; Return Personal Vehicle to Storage
 >+F6::
@@ -153,7 +160,7 @@ Return
 Return
 
 ; AFK Walking
-^F6::
+^F10::
 	toggle_AFK := !toggle_AFK
 	if(toggle_AFK && Active_Window()){
 		Send {w down}{a down}
@@ -164,13 +171,13 @@ Return
 return
 
 ; AFK Dancing in Nightclub
-!F6::
+!F10::
 	toggle_AFK_Dancing := !toggle_AFK_Dancing
 	if(toggle_AFK_Dancing && Active_Window()){
-		; SetTimer, AutoClicker_Left, % Random (500, 600)
-		SetTimer, AutoClicker_Left, 475
+        ; SetTimer, AutoClicker_Left, % Random (500, 600)
+        SetTimer, AutoClicker_Left, 475
 	}else{
-		SetTimer, AutoClicker_Left, Off
+        SetTimer, AutoClicker_Left, Off
 	}
 return
 
@@ -187,34 +194,20 @@ Insert::
 Return
 
 ; Close GTA directly.
-^F11::
+^F12::
 	Process, Close, GTA5.exe
 	Process, Close, GTA5_Enhanced.exe
 Return
 
-; Auto grabber for example Gold, Cash etc.
->+F5::
-<+F5::
-	toggle_Grabber := !toggle_Grabber
-	if(toggle_Grabber && Active_Window()){
-		SetTimer, AutoClicker, 250
-	}else{
-		SetTimer, AutoClicker, Off
-		toggle_Grabber := false
-		Shift_Up()
-	}
-Return
-
 ; Auto bike rider.
 F10::
-<+F10::
 	toggle_rider := !toggle_rider
 	if(toggle_rider && Active_Window()){
 		SetTimer, Speed_Bike, 800
 	}else{
 		SetTimer, Speed_Bike, Off
 		toggle_rider := false
-		Shift_Up()
+		SetCapsLockState, Off
 	}
 Return
 
@@ -244,7 +237,7 @@ F8::
 				}
 			}
 		}
-
+		
 		width := 210, time := 20000101004800 ;48m - GTA Day Timer
 		Gui -Caption +AlwaysOnTop
 		Gui, Font, s32 c008000
@@ -316,12 +309,7 @@ Active_Window(){
 	}
 }
 Speed_Bike(){
-	send {LShift}
-}
-AutoClicker(){
-	CoordMode, Mouse, Window
-	MouseMove, 0, 0, 0
-	Click
+	send {CapsLock}
 }
 
 
@@ -420,7 +408,7 @@ GetKeyboardLayout(){
 }
 GetSymbol(index){
 	global layout
-
+	
 	symbols := Object()
 	symbols[04090409] := ["!", "@", "#"]  ; US - Standard
 	symbols["FFFFFFFFF0010409"] := ["!", "@", "#"]  ; US - International
@@ -428,9 +416,9 @@ GetSymbol(index){
 	symbols[04130413] := ["!", """", "#"]  ; Dutch - Standard
 	symbols[04070407] := ["!", """", "§"]  ; German - Standard
 	symbols[0000] := ["!", "@", "#"]  ; fallback
-
+	
 	if !symbols.HasKey(layout)
 		layout := "0000"
-
+	
 	SendRaw, % symbols[layout][index]
 }
