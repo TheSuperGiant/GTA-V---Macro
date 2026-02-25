@@ -10,7 +10,6 @@ KeyDelay_Enter := 102 - (KeyDelay * 2)
 SetKeyDelay, %keyDelay%, %keyDelay%
 Menu_Down := 1
 program_window_title := "Grand Theft Auto V"
-Menu_First_Time := 1
 layout := GetKeyboardLayout()
 
 ; Reload script if hotkey doesn't work.
@@ -253,8 +252,7 @@ F8::
 	}
 Return
 
-AutoClicker_Left()
-{
+AutoClicker_Left(){
 	Random, sleepdelay, 0, 50
 	Sleep, sleepDelay
 	Click
@@ -316,21 +314,27 @@ Speed_Bike(){
 
 Menu(){
 	global Menu_First_Time, keyDelay
-	Menu_sleep := 57 - (KeyDelay * 2)
 	if(Menu_First_Time = 1){
-		Send {m}
-		Menu_sleep := 57 - KeyDelay
-		Sleep, %Menu_sleep%
-		Send {m}
-		Menu_sleep := 57 - KeyDelay
+		Menu_count := 3	
 		Menu_First_Time := 0
+	}else{
+		Menu_count := 1
 	}
-	Sleep, %Menu_sleep%
-	Send {m}
-	Sleep, %KeyDelay_Enter%
+	Menu_sleep := 60 - (KeyDelay)
+	Loop, %Menu_count% {
+		Send {m}
+		if (A_Index != count){
+			Sleep, %Menu_sleep%
+		}
+	}
+}
+Menu_First(){
+	global Menu_First_Time
+	Menu_First_Time := 1
+	Menu()
 }
 Menu__Health_and_Ammo(){
-	Menu()
+	Menu_First()
 	global Menu_Down
 	Menu__Down_total := 3 + Menu_Down
 	Send {Down %Menu__Down_total%}
@@ -353,7 +357,7 @@ Menu__Body_Armor(){
 	Send {Up 3}
 }
 Menu__Service_Vehicles(){
-	Menu()
+	Menu_First()
 	Send {Down 3}
 	Sleep, %keyDelay%
 	Send {Enter}
@@ -381,7 +385,7 @@ Menu__Terrorbyte(){
 	Sleep, %KeyDelay_Enter%
 }
 Menu__Manage_Vehicles(){
-	Menu()
+	Menu_First()
 	global Menu_Down
 	Menu__Down_total := 1 + Menu_Down
 	Send {Down %Menu__Down_total%}
@@ -390,7 +394,7 @@ Menu__Manage_Vehicles(){
 	Sleep, %KeyDelay_Enter%
 }
 Menu__Appearance(){
-	Menu()
+	Menu_First()
 	Send {Down 5}
 	Sleep, %keyDelay%
 	Send {Enter}
