@@ -173,10 +173,10 @@ return
 !F10::
 	toggle_AFK_Dancing := !toggle_AFK_Dancing
 	if(toggle_AFK_Dancing && Active_Window()){
-        ; SetTimer, AutoClicker_Left, % Random (500, 600)
-        SetTimer, AutoClicker_Left, 475
+		; SetTimer, AutoClicker_Left, % Random (500, 600)
+		SetTimer, AutoClicker_Left, 475
 	}else{
-        SetTimer, AutoClicker_Left, Off
+		SetTimer, AutoClicker_Left, Off
 	}
 return
 
